@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { headers } from "next/headers";
 import { ContextProvider, RelayerProvider } from '@/context';
+import Navbar from '@/components/Navbar';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,7 +34,12 @@ export default async function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ContextProvider cookies={cookies}>
-          <RelayerProvider>{children}</RelayerProvider>
+          <RelayerProvider>
+            <div className="min-h-screen bg-gradient-to-br from-zinc-50 to-zinc-100 dark:from-zinc-900 dark:to-black">
+              <Navbar />
+              {children}
+            </div>
+          </RelayerProvider>
         </ContextProvider>
       </body>
     </html>

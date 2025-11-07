@@ -1,14 +1,26 @@
 export const routes = {
-  OVERVIEW:{
+  HOME: {
+    path: '/',
+  },
+  OVERVIEW: {
     path: '/overview',
   },
-  AUCTION:{
+  AUCTION: {
     path: '/auction',
   },
-  BID:{
+  CREATE_AUCTION: {
+    path: '/auction/create',
+  },
+  MYSTATUS: {
+    path: '/mystatus',
+  },
+  BID: {
     path: '/bid',
   },
-  RESULT:{
+  RESULT: {
     path: '/result',
+  },
+  ADMIN: {
+    path: '/admin',
   },
 }
